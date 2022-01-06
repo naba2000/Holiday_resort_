@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<title>Holiday Resort | About Us</title>
+		<link href="site.css" type="text/css" rel="stylesheet" />
+	</head>
+	<style>
+	.a0{
+	width:80%;
+	margin:auto;
+	}
+	.a1{
+		width:50%;
+		height:600px;
+		float:left;
+	}
+	.a2{
+	width:49%;
+		float:right;
+		height:600px;
+	}
+	.a2 img{
+	float:left;
+	clear:both;
+	}
+	.a2 h2{
+	clear:both;
+	}
+	.a3{
+	border:1px solid skyblue;
+	width:400px;
+	height:200px;
+	margin:2px;
+	}
+
+	</style>
+	<body>
+
+
+			<header ><a href="index.html">
+			<img src="images/hello.png">
+			<span class="sp">Holiday Resort</span>
+			</a>
+
+			</header>
+		<div id="page">
+			<div id= "P1">
+			<table height="50px" width="1205px" cellpadding="" cellspacing="">
+			<tr>
+
+      <td><a href="about.html">About Us<a></td>
+			</tr>
+			</table>
+			</div>
+				<table height="50px" width="1200px" border="0">
+					<tr>
+						<td width="500" height="50" align="left"><font color="blue" size="5"><span >Holiday Resort</span></font></td>
+						<td width="500" height="50" align="right"><font color="blue" size="5"><span id="date"></span><span id="greets"></span></font></td>
+					</tr>
+				</table>
+		</div>
+			<script language="javascript">
+			var z=0;
+var p1={
+	name:"Delicious Food",
+	imgfile:"f1.png"
+};
+
+var p2={
+	name:"Spa and Fitness ",
+	imgfile:"spa.jpg"
+};
+var p3={
+	name:"Rafting",
+	imgfile:"rafting.jpg"
+};
+var p4={
+	name:"Trekking",
+	imgfile:"trek.jpg"
+};
+
+
+var ph=[p1,p2,p3,p4];
+
+setInterval(slider,2000);
+function slider(){
+	document.getElementById("slide").src="images/" +ph[z].imgfile;
+	document.getElementById("text").innerHTML=ph[z].name;
+	z++;
+	if (z>3)
+	{
+		z=0;
+	}
+
+}
+			</script>
+			<div class="a0">
+			<div class="a1">
+			<img id="slide" src="images/boating.jpg" height="400px" width="500px">
+			<h3 id="text" >Boating</h3>
+
+			</div>
+			<div class="a2">
+			<div class="a3"">
+			<h2>Manager</h2>
+			<img src="images/pp.jpg" width="120" height="120">
+
+			</div>
+			<div class="a3">
+			<h2>Head Chef</h2>
+			<img src="images/chef.jpg" width="120" height="120">
+		
+			<script src="slider.js"></script>
+
+	</body>
+</html>
